@@ -34,6 +34,7 @@ const drawGame = () => {
 // Play Game
 const playGame = (userChoice) => {
   const compChoice = genCompChoice();
+
   if (userChoice === compChoice) {
     //Draw game
     drawGame();
@@ -52,6 +53,23 @@ const playGame = (userChoice) => {
     }
     showWinner(userWin, userChoice, compChoice);
   }
+
+  // Second options for choices
+  // if (userChoice === compChoice) {
+  //   // Draw game
+  //   drawGame();
+  // } else if (
+  //   (userChoice === "rock" && compChoice === "scissor") ||
+  //   (userChoice === "paper" && compChoice === "rock") ||
+  //   (userChoice === "scissor" && compChoice === "paper")
+  // ) {
+  //   // User wins
+  //   showWinner(true, userChoice, compChoice);
+  // } else {
+  //   // Computer wins
+  //   showWinner(false, userChoice, compChoice);
+  // }
+
   showResetBtn();
 };
 
